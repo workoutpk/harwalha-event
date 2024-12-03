@@ -1,0 +1,11 @@
+ .card-text{
+    font-size: 15px;
+    letter-spacing: 1.4px;
+    color: #383838;
+}
+
+.card-title{
+    font-size:20px;
+    font-weight: bold;
+    color: #383838;
+}

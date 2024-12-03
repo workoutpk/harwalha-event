@@ -1,0 +1,45 @@
+
+.item-list {
+  height: calc(100vh - 168px);
+  overflow-y: auto;
+  padding: 30px 0px;
+  background-color: rgba(224, 111, 0, 0.1);
+}
+
+.logout {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: rgb(224 111 0 / 19%);
+}
+
+.logout a {
+  color: #e06f00;
+  cursor: pointer;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: #fff !important;
+  background-color: var(--primary-color);
+  opacity: 1;
+}
+
+.list-group-item {
+  border-radius: 0px;
+  background-color: transparent;
+  color: #383838;
+  border: none;
+  font-size: 24px;
+  padding: 16px 0px 16px 39px;
+  margin-bottom: 6px;
+}
+
+.mat-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.material-icons {
+  font-size: 20px;
+}

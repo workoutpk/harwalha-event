@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="76" height="76" viewBox="0 0 76 76">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.055" y1="0.093" x2="0.932" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d3752b"/>
+      <stop offset="1" stop-color="#b45520"/>
+    </linearGradient>
+    <filter id="Ellipse_19" x="0" y="0" width="76" height="76" filterUnits="userSpaceOnUse">
+      <feOffset dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_55925" data-name="Group 55925" transform="translate(24 18)">
+    <g transform="matrix(1, 0, 0, 1, -24, -18)" filter="url(#Ellipse_19)">
+      <circle id="Ellipse_19-2" data-name="Ellipse 19" cx="14" cy="14" r="14" transform="translate(24 18)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="vuesax_outline_arrow-left" data-name="vuesax/outline/arrow-left" transform="translate(21.187 7) rotate(90)">
+      <g id="arrow-left" transform="translate(0 0)">
+        <path id="Vector" d="M.452,0A.449.449,0,0,1,.773.133L4.447,3.807a.457.457,0,0,1,0,.641L.773,8.122A.454.454,0,0,1,.132,7.48L3.484,4.127.132.775a.457.457,0,0,1,0-.641A.439.439,0,0,1,.452,0Z" transform="translate(3.499 9.499) rotate(-90)" fill="#fff"/>
+        <path id="Vector-2" data-name="Vector" d="M14.524,14.524H0V0H14.524Z" fill="none" opacity="0"/>
+      </g>
+    </g>
+  </g>
+</svg>
