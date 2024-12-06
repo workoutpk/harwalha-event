@@ -1,0 +1,104 @@
+<app-header></app-header>
+<div class="auth-wrap py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-5 text-end">
+                <div class="auth-btn">
+                    <button class="btn btn-secondary" routerLink="/auth/login">Login</button>
+
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="auth-btn">
+                    <button class="btn btn-primary" >Register</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-xl-5 left-col">
+                <div class="auth-left-card h-100 d-flex align-items-center">
+                    <div class="card ">
+                        <div class="card-body text-center">
+                            <div class="auth-logo">
+                                <img src="assets/images/logo.svg" alt="">
+                            </div>
+
+                            <h5 class="card-title">Lorem Ipsum Dolor Sit Amet</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.</p>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-5 right-col ">
+                <div class="auth-right-card h-100">
+                    <div class="card h-100">
+                        <div class="card-body ">
+                            <h5 class="card-title mb-2">Create an Account</h5>
+                             <p class="card-text">Please few details to register as event organizer</p>
+                             <form  [formGroup]="registerForm" (ngSubmit)="registerUser()">
+                                <div class="auth-form">
+                                    <div class="custom-form-input date-radius mb-4">
+                                        <mat-form-field  appearance="outline" class="w-100">
+                                            <input type="text" formControlName="username" matInput placeholder="Full Name">
+                                          
+                                        </mat-form-field>
+                                    </div> 
+    
+                                    <div class="custom-form-input date-radius mb-4">
+                                        <mat-form-field  appearance="outline" class="w-100">
+                                            <input type="text" formControlName="email" matInput placeholder="Email Address">
+                                        </mat-form-field>
+                                    </div> 
+    
+                                    <div class="custom-form-input date-radius mb-4">
+                                        <mat-form-field  appearance="outline" class="w-100">
+                                            <input type="text" formControlName="phone" matInput placeholder="Mobile Number">
+                                        </mat-form-field>
+                                    </div> 
+    
+                                    <div class="custom-form-input date-radius mb-4">
+                                        <mat-form-field  appearance="outline" class="w-100">
+                                            <mat-select formControlName="country" disableRipple placeholder="Select Country">
+                                                <mat-option value="1">India</mat-option>
+                                                <mat-option value="2">Afganistan</mat-option>
+                                              </mat-select>
+                                        </mat-form-field>
+                                    </div> 
+    
+    
+    
+                                    <div class="custom-form-input date-radius mb-3">
+                                        <mat-form-field appearance="outline" class="w-100">
+                                            <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" placeholder="Create Password">           
+                                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                            </button>
+                                        </mat-form-field>
+                                    </div> 
+    
+                           
+    
+                                    <div class="mt-4">
+                                        <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary w-100" (click)="registerUser()">Next</button>
+                                    </div>
+    
+                                    
+                                </div>
+                            </form>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>

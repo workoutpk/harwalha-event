@@ -1,0 +1,25 @@
+
+.right-col {
+    background-color: #fff;
+    box-shadow: none;
+    height: 60vh;
+    overflow-y: auto;
+}
+
+.card-title, .card-text{
+    font-weight: bold;
+    font-size:18px;
+    letter-spacing: 0px;
+    color: #61B92B!important;
+}
+
+.card-text{
+   
+    letter-spacing: 0px!important;
+    color: #383838!important;
+}
+
+.bi-check-circle-fill{
+    color: var(--primary-color);
+    font-size: 80px;
+}

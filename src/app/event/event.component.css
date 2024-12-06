@@ -1,0 +1,145 @@
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 280px;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: var(--primary-color);
+    position: fixed;
+    top: 0;
+    /* width: 230px; */
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 999;
+  }
+  
+  
+  
+  mat-sidenav{
+    /* background: var(--primary-color); */
+    border: none;
+  }
+  
+  .sidenav-logo img {
+    width: 160px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+  
+  
+  
+  
+.sidenav-logo{
+  height: 92px;
+  /* margin: auto; */
+  align-items: center;
+  display: flex
+;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  top: 0%;
+  background: #e06f00;
+  transform: translate(-50%, -0%);
+}
+  
+  
+  .active {
+  z-index: 2;
+  color: #fff!important;
+  background:  var(--primary-color) 0% 0% no-repeat padding-box;
+  /* border-radius: 5px; */
+  opacity: 1;
+  }
+  
+  .mat-icon {
+  display: block!important;
+  margin: 0 auto!important;
+  }
+  
+
+  .account-drop .nav-link{
+    border: 1px solid #ffffff;
+    background-color: #FFFFFF;
+    border-radius: 27px;
+    color: var(--primary-color);
+    height: 42px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px ;
+    padding: .375rem .375rem!important;
+    gap: 8px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+/* dropdown btn css */
+.dropdown .custom-dropdown{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: .375rem .375rem;
+  height: 42px;
+}
+
+
+.account-drop .nav-link{
+  border: 1px solid #ffffff;
+  background-color: #FFFFFF;
+  border-radius: 27px;
+  color: var(--primary-color);
+  height: 42px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px ;
+  padding: .375rem .375rem!important;
+  gap: 8px;
+  font-size: 14px;
+}
+
+
+.btn-outline-secondary{
+  border: 1px solid #FFFFFF;
+  border-radius: 27px;
+  color: #FFFFFF;
+  font-size: 14px;
+  height: 42px;
+  align-items: center;
+  display: flex;
+}
+
+.btn-outline-secondary:hover{
+  background-color: transparent;
+}
+
+.btn-outline-secondary:focus{
+  box-shadow: none;
+}
+
+.btn-outline-secondary, 
+.btn-outline-secondary.active,
+.btn-outline-secondary.dropdown-toggle.show, 
+.btn-outline-secondary:active {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.btn-outline-secondary.dropdown-toggle.show:focus{
+  box-shadow: none;
+}
+/* dropdown btn css end */

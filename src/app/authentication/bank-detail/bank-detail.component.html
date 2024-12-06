@@ -1,0 +1,96 @@
+<app-header></app-header>
+<div class="auth-wrap py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-5 text-end">
+                <div class="auth-btn">
+                    <button class="btn btn-secondary" routerLink="/auth/login">Login</button>
+
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="auth-btn">
+                    <button class="btn btn-primary" >Register</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-xl-5 left-col">
+                <div class="auth-left-card h-100 d-flex align-items-center">
+                    <div class="card ">
+                        <div class="card-body text-center">
+                            <div class="auth-logo">
+                                <img src="assets/images/logo.svg" alt="">
+                            </div>
+
+                            <h5 class="card-title">Lorem Ipsum Dolor Sit Amet</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.</p>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-5 right-col ">
+                <div class="auth-right-card h-100">
+                    <div class="card h-100">
+                        <div class="card-body ">
+                            <h5 class="card-title mb-2">Bank Account Details</h5>
+                             <p class="card-text">Enter bank account details, to receive payment on it. you'll receive payment monthly</p>
+                             <form action="javascript:void(0)" [formGroup]="bankDetails" (ngSubmit)="onSubmit()">
+                                <div class="auth-form">
+                                    <div class="custom-form-input date-radius mb-4">
+                                        <mat-form-field appearance="outline" class="w-100">
+                                            <input type="text" formControlName="accountHolderName" matInput placeholder="Account Holder Name">
+                                          
+                                        </mat-form-field>
+                                    </div> 
+    
+                                    <div class="custom-form-input date-radius mb-4">
+                                        <mat-form-field appearance="outline" class="w-100">
+                                            <input type="text" formControlName="bankName" matInput placeholder="Bank Name">
+                                        </mat-form-field>
+                                    </div> 
+    
+                                    <div class="custom-form-input date-radius mb-4">
+                                        <mat-form-field appearance="outline" class="w-100">
+                                            <input type="text" formControlName="accountNumber" matInput placeholder="Account Number">
+                                        </mat-form-field>
+                                    </div> 
+    
+                                    <div class="custom-form-input date-radius mb-4">
+                                        <mat-form-field appearance="outline" class="w-100">
+                                            <input type="text" formControlName="ibanNumber" matInput placeholder="IBAN Number">
+                                        </mat-form-field>
+                                    </div> 
+    
+                                    <div class="custom-form-input date-radius mb-4">
+                                        <mat-form-field appearance="outline" class="w-100">
+                                            <input type="text"  formControlName="swiftCode" matInput placeholder="SWIFT Code">
+                                        </mat-form-field>
+                                    </div> 
+    
+                                    <div class="mt-4">
+                                        <button class="btn btn-primary w-100" type="submit"  >Submit</button>
+                                    </div>
+    
+                                    
+    
+    
+                                </div>
+                            </form>
+                      
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>

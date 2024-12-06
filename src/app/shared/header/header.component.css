@@ -1,0 +1,111 @@
+.navbar{
+    background-color: var(--primary-color) !important;
+    padding: 15px 0px ;
+}
+
+
+
+.nav-link {
+    padding: 0!important;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size:1rem;
+
+}
+
+.navbar-brand{
+    color: #ffffff;
+    margin-right: 1.5rem;
+}
+
+.navbar-toggler {
+    padding: .25rem .65rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    transition: box-shadow .15s ease-in-out;
+}
+
+
+/* dropdown btn css */
+.dropdown .custom-dropdown{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: .375rem .375rem;
+    height: 42px;
+}
+
+
+.account-drop .nav-link{
+    border: 1px solid #ffffff;
+    background-color: #FFFFFF;
+    border-radius: 27px;
+    color: var(--primary-color);
+    height: 42px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px ;
+    padding: .375rem .375rem!important;
+    gap: 8px;
+    font-size: 14px;
+}
+
+
+.btn-outline-secondary{
+    border: 1px solid #FFFFFF;
+    border-radius: 27px;
+    color: #FFFFFF;
+    font-size: 14px;
+    height: 42px;
+    align-items: center;
+    display: flex;
+}
+
+.btn-outline-secondary:hover{
+    background-color: transparent;
+}
+
+.btn-outline-secondary:focus{
+    box-shadow: none;
+}
+
+.btn-outline-secondary, 
+.btn-outline-secondary.active,
+.btn-outline-secondary.dropdown-toggle.show, 
+.btn-outline-secondary:active {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.btn-outline-secondary.dropdown-toggle.show:focus{
+    box-shadow: none;
+}
+/* dropdown btn css end */
+
+.active{
+    font-weight: bold;
+    color: #FFFFFF;
+    border-bottom: 3px solid #ffffff;
+}
+
+
+.navbar-expand-lg .navbar-nav {
+    align-items: center!important;
+    gap: 25px;
+}
+
+.logo-box{
+    width: 160px;
+    /* background: red; */
+    height: 46px;
+}
+
+.logo-box img{
+    width: 100%;
+    height: 100%;
+}

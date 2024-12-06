@@ -1,0 +1,34 @@
+<div class="dialog-wrapper">
+    <!-- <div mat-dialog-title>
+        <span class="dialog-heading">Edit Delivery Fare     </span>
+        <i mat-dialog-close class="bi bi-x-circle-fill primary-color"></i>
+    </div> -->
+    <mat-dialog-content>
+        <div class="row">
+            <div class="col-12 my-2">
+                <h4 class="card-title">Verify Your Email</h4>
+                <p class="card-text">Enter a 4 digit code sent to your email address</p>
+                <form action="javascript:void(0)" [formGroup]="verifyEmail" (ngSubmit)="verifyOtp()">
+                    <div class="auth-form">
+                        <div class="custom-form-input date-radius mb-4">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <input type="text" formControlName="otp" matInput placeholder="Enter OTP" />
+                            </mat-form-field>
+                        </div>
+    
+                        <div class="d-flex justify-content-end align-items-center">
+                            <a class="forgot" (click)="resendOtp()">Resend OTP</a>
+                        </div>
+    
+                        <div class="mt-4">
+                            <button class="btn btn-primary w-100" type="submit" mat-dialog-close 
+                                >Verify</button>
+                        </div>
+    
+                    </div>
+                </form>
+               
+            </div>
+        </div>
+    </mat-dialog-content>
+</div>
