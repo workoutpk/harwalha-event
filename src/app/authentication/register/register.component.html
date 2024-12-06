@@ -42,21 +42,21 @@
                              <form  [formGroup]="registerForm" (ngSubmit)="registerUser()">
                                 <div class="auth-form">
                                     <div class="custom-form-input date-radius mb-4">
-                                        <mat-form-field formControlName="username" appearance="outline" class="w-100">
-                                            <input type="text" matInput placeholder="Full Name">
+                                        <mat-form-field  appearance="outline" class="w-100">
+                                            <input type="text" formControlName="username" matInput placeholder="Full Name">
                                           
                                         </mat-form-field>
                                     </div> 
     
                                     <div class="custom-form-input date-radius mb-4">
-                                        <mat-form-field formControlName="email" appearance="outline" class="w-100">
-                                            <input type="text" matInput placeholder="Email Address">
+                                        <mat-form-field  appearance="outline" class="w-100">
+                                            <input type="text" formControlName="email" matInput placeholder="Email Address">
                                         </mat-form-field>
                                     </div> 
     
                                     <div class="custom-form-input date-radius mb-4">
-                                        <mat-form-field formControlName="phone" appearance="outline" class="w-100">
-                                            <input type="text" matInput placeholder="Mobile Number">
+                                        <mat-form-field  appearance="outline" class="w-100">
+                                            <input type="text" formControlName="phone" matInput placeholder="Mobile Number">
                                         </mat-form-field>
                                     </div> 
     

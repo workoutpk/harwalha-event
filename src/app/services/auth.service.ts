@@ -23,9 +23,11 @@ export class AuthService {
     login(loginRequest: LoginRequest): Observable<LoginResponse> {
         return this.http.post<LoginResponse>(this.apiUrl, loginRequest).pipe(
             tap(response => {
+                console.log("response", response.data);
+
                 // Store user details and jwt token in local storage
                 localStorage.setItem('currentUser', JSON.stringify(response));
-                // localStorage.setItem('token', response.token);
+                localStorage.setItem('token', JSON.stringify(response.data));
                 this.currentUserSubject.next(response);
             }),
             catchError(error => {

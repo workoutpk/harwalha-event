@@ -753,7 +753,11 @@ td.mat-mdc-footer-cell:first-of-type {
 table {
   width: 100%;
 }
-
+.btn-primary:disabled {
+  color: #fff;
+  background-color: #6a6e75!important;
+  border-color: #6a6e75!important;
+}
 
 
 

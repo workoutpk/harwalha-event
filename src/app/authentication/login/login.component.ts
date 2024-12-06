@@ -34,13 +34,12 @@ export class LoginComponent implements OnInit {
     }
     onSubmit() { 
         try {
-            console.log(this.loginForm.value);
-            
+
             if (this.loginForm.valid) {
                 this.isLoading = true;
                 this.loginError = null;
                 let data = {
-                    username: this.loginForm.value.username,
+                    email: this.loginForm.value.username,
                     password: this.loginForm.value.password,
                     device_type:3, // 1 = android, 2 = ios
                     device_token:"xxgfxfxfxgx"
