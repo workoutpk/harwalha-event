@@ -43,7 +43,7 @@
                                 <div class="auth-form">
                                     <div class="custom-form-input date-radius mb-4">
                                         <mat-form-field  appearance="outline" class="w-100">
-                                            <input type="text" formControlName="username" matInput placeholder="Full Name">
+                                            <input type="text" formControlName="fullName" matInput placeholder="Full Name">
                                           
                                         </mat-form-field>
                                     </div> 
@@ -65,7 +65,8 @@
                                             <mat-select formControlName="country" disableRipple placeholder="Select Country">
                                                 <mat-option value="1">India</mat-option>
                                                 <mat-option value="2">Afganistan</mat-option>
-                                              </mat-select>
+                                                <!-- <mat-option  *ngFor="let country of countryList" [value]="country.id"> {{country.name}}</mat-option> -->
+                                            </mat-select>
                                         </mat-form-field>
                                     </div> 
     
@@ -86,7 +87,7 @@
                                         <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary w-100" (click)="registerUser()">Next</button>
                                     </div>
     
-                                    
+                                    <pre>Form values: {{ registerForm.value | json }}</pre>
                                 </div>
                             </form>
                             

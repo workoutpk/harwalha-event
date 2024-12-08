@@ -15,8 +15,8 @@ export class ApiService {
             this.baseUrl = environment.apiUrl;
         }
 
-    send(url: string, item: Object): Observable<Object>{
-        return this.http.post<Object>(`${this.baseUrl}${url}`, item);
+    send(url: string, item: Object): Observable<any>{
+        return this.http.post<any>(`${this.baseUrl}${url}`, item);
     }
     getAll(url: string): Observable<Response[]> {
         return this.http.get<Response[]>(`${this.baseUrl}${url}`);

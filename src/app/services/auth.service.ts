@@ -26,8 +26,8 @@ export class AuthService {
                 console.log("response", response.data);
 
                 // Store user details and jwt token in local storage
-                localStorage.setItem('currentUser', JSON.stringify(response));
-                localStorage.setItem('token', JSON.stringify(response.data));
+                localStorage.setItem('currentUser', JSON.stringify(response.data));
+                localStorage.setItem('token', JSON.stringify(response.data.login_token));
                 this.currentUserSubject.next(response);
             }),
             catchError(error => {
