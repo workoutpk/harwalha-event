@@ -18,6 +18,9 @@ export class ApiService {
     send(url: string, item: Object): Observable<any>{
         return this.http.post<any>(`${this.baseUrl}${url}`, item);
     }
+    get(url: string): Observable<Response> {
+        return this.http.get<Response>(`${this.baseUrl}${url}`);
+    }
     getAll(url: string): Observable<Response[]> {
         return this.http.get<Response[]>(`${this.baseUrl}${url}`);
     }
@@ -26,8 +29,8 @@ export class ApiService {
         return this.http.get<Response>(`${this.baseUrl}${url}/${id}`);
     }
 
-    create(url: string, item: Object): Observable<Response> {
-        return this.http.post<Response>(`${this.baseUrl}${url}`, item);
+    create(url: string, item: Object): Observable<any> {
+        return this.http.post<any>(`${this.baseUrl}${url}`, item);
     }
 
     update(url: string, item: Object): Observable<Response> {

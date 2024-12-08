@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { SUBSCRIPTION_BUY } from 'src/api.constants';
+import { ToasterService } from 'src/app/services/toaster.service';
 @Component({
     selector: 'app-buy',
     templateUrl: './buy.component.html',
@@ -10,10 +11,14 @@ import { SUBSCRIPTION_BUY } from 'src/api.constants';
 })
 export class BuyComponent implements OnInit {
     buySubcrption: FormGroup
+    packageInfo: any;
+    paymentMethod: string = 'creditCard';
+    payableAmount: number = 0;
     constructor(
         private fb: FormBuilder,
         private router: Router,
-        private apiServices: ApiService
+        private apiServices: ApiService,
+        private toastService: ToasterService
     ) {
         this.buySubcrption = this.fb.group({
             cardHolderName: ['', Validators.required,],
@@ -22,28 +27,34 @@ export class BuyComponent implements OnInit {
         })
     }
     ngOnInit(): void {
-        throw new Error('Method not implemented.');
+        this.packageInfo = JSON.parse(localStorage.getItem('packageData') || '{}');
+        console.log("packageInfo", this.packageInfo);
+        
+        this.payableAmount = this.packageInfo?.payment;
     }
     onSubmit() {
-        const body = {
-
-            "token": "1487d109e99206ab0c855a4720c92c06",
-            "organizer_id": "2",
-            "package_id": "12",
-            "payment": "150",
-            "start_date": "24-11-2024",
-            "end_date": "23-11-2025",
-            "payment_status": "success", // "success", "pending", "failed"
-            "transaction_id": "TXND12345654",
-            "is_auto_renew": "yes" // "yes", "no"
-
+        const data = {
+            "package_id": this.packageInfo?.id,
+            "card_holder_name": this.buySubcrption.get('cardHolderName')?.value,
+            "card_number": this.buySubcrption.get('cardNumber')?.value,
+            "cvv": this.buySubcrption.get('cvv')?.value,
         }
-        console.log(this.buySubcrption.value);
-
+        if(this.buySubcrption.invalid){
+            this.toastService.error("Please fill all the required fields");
+            this.buySubcrption.markAllAsTouched()
+            return
+        }
         try {
-            this.apiServices.create(SUBSCRIPTION_BUY, body).subscribe({
+            this.apiServices.create(SUBSCRIPTION_BUY, this.packageInfo ).subscribe({
                 next: (response) => {
-                    this.router.navigate(['/auth/register-successfull'])
+                    if(response.error){
+                        this.toastService.error(JSON.stringify(response.message));
+                    }else{
+                        this.toastService.success("Buy subscription successfully");
+                        this.router.navigate(['/auth/register-successfull'])
+                       
+                    }
+                  
                 },
                 error(err) {
                     console.log(err)

@@ -1,213 +1,77 @@
 <app-header></app-header>
 <section class="package-wrap">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="package-card">
-          <div class="card">
-            <div class="card-header">
-              <div class="package-box">Monthly package</div>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-lg-4" *ngFor="let package of packageData">
+                <div class="package-card">
 
-              <div class="package-plan">
-                <div class="diamond">
-                  <img
-                    src="assets/images/subscription_diomond.svg"
-                    alt="diamond"
-                  />
+                    <div class="card">
+                        <div class="card-header">
+
+                            <div class="package-box" *ngIf="package.package_type == 3">
+
+                                Yearly package
+
+                            </div>
+                            <div class="package-box" *ngIf="package.package_type == 2">
+                                Semi-Annual package
+
+                            </div>
+                            <div class="package-box" *ngIf="package.package_type == 1">
+                                Monthly package
+
+                            </div>
+                            <div class="package-plan">
+                                <div class="diamond">
+                                    <img src="assets/images/subscription_diomond.svg" alt="diamond" />
+                                </div>
+
+                                <div class="plan-txt">
+                                    <h6>Paid every {{package.title}}</h6>
+                                    <h5>
+                                        <span class="text-success">SAR {{package.discount_price}}</span>
+                                        <s class="text-muted ms-2">SAR {{package.price}}</s>
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center mt-3">
+                                <div class="discount"> {{package.discount_percentage}}% discount</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="plan-list">
+                                <ul>
+                                    <li>
+                                        <img src="/assets/images/vuesax-outline-danger.svg" alt="check" />
+                                        <span> Lorem ipsum dolor sit amet </span>
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/vuesax-outline-danger.svg" alt="check" />
+                                        <span> Lorem ipsum dolor sit amet </span>
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/vuesax-outline-danger.svg" alt="check" />
+                                        <span> Lorem ipsum dolor sit amet </span>
+                                    </li>
+                                    <li>
+                                        <img src="/assets/images/vuesax-outline-danger.svg" alt="check" />
+                                        <span> Lorem ipsum dolor sit amet </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card-footer text-center">
+                            <button (click)="buyPackage(package.package_id)" class="btn btn-primary w-150">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="plan-txt">
-                  <h6>Paid every 1 month</h6>
-                  <h5>
-                    <span class="text-success">SAR 50 </span>
-                    <s class="text-muted ms-2">SAR 70</s>
-                  </h5>
-                </div>
-              </div>
-
-              <div class="d-flex justify-content-center mt-3">
-                <div class="discount">20% discount</div>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="plan-list">
-                <ul>
-                  <li>
-                    <img
-                      src="/assets/images/vuesax-outline-danger.svg"
-                      alt="check"
-                    />
-                    <span> Lorem ipsum dolor sit amet </span>
-                  </li>
-                  <li>
-                    <img
-                      src="/assets/images/vuesax-outline-danger.svg"
-                      alt="check"
-                    />
-                    <span> Lorem ipsum dolor sit amet </span>
-                  </li>
-                  <li>
-                    <img
-                      src="/assets/images/vuesax-outline-danger.svg"
-                      alt="check"
-                    />
-                    <span> Lorem ipsum dolor sit amet </span>
-                  </li>
-                  <li>
-                    <img
-                      src="/assets/images/vuesax-outline-danger.svg"
-                      alt="check"
-                    />
-                    <span> Lorem ipsum dolor sit amet </span>
-                  </li>
-                </ul>
-              </div>
             </div>
 
-            <div class="card-footer text-center">
-              <button routerLink="/auth/buy" class="btn btn-primary w-150">Buy Now</button>
-            </div>
-          </div>
         </div>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="package-card">
-          <div class="card">
-            <div class="card-header">
-              <div class="package-box">Semi-Annual Package</div>
-
-              <div class="package-plan">
-                <div class="diamond">
-                  <img
-                    src="assets/images/subscription_diomond.svg"
-                    alt="diamond"
-                  />
-                </div>
-
-                <div class="plan-txt">
-                  <h6>Paid every 1 month</h6>
-                  <h5>
-                    <span class="text-success">SAR 50 </span>
-                    <s class="text-muted ms-2">SAR 70</s>
-                  </h5>
-                </div>
-              </div>
-
-              <div class="d-flex justify-content-center mt-3">
-                <div class="discount">20% discount</div>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="plan-list">
-                <ul>
-                  <li>
-                    <img
-                      src="/assets/images/vuesax-outline-danger.svg"
-                      alt="check"
-                    />
-                    <span> Lorem ipsum dolor sit amet </span>
-                  </li>
-                  <li>
-                    <img
-                      src="/assets/images/vuesax-outline-danger.svg"
-                      alt="check"
-                    />
-                    <span> Lorem ipsum dolor sit amet </span>
-                  </li>
-                  <li>
-                    <img
-                      src="/assets/images/vuesax-outline-danger.svg"
-                      alt="check"
-                    />
-                    <span> Lorem ipsum dolor sit amet </span>
-                  </li>
-                  <li>
-                    <img
-                      src="/assets/images/vuesax-outline-danger.svg"
-                      alt="check"
-                    />
-                    <span> Lorem ipsum dolor sit amet </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="card-footer text-center">
-              <button routerLink="/auth/buy" class="btn btn-primary w-150">Buy Now</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="package-card">
-          <div class="card">
-            <div class="card-header">
-              <div class="package-box">Yearly Package</div>
-
-              <div class="package-plan">
-                <div class="diamond">
-                  <img
-                    src="assets/images/subscription_diomond.svg"
-                    alt="diamond"
-                  />
-                </div>
-
-                <div class="plan-txt">
-                  <h6>Paid every 1 month</h6>
-                  <h5>
-                    <span class="text-success">SAR 50 </span>
-                    <s class="text-muted ms-2">SAR 70</s>
-                  </h5>
-                </div>
-              </div>
-
-              <div class="d-flex justify-content-center mt-3">
-                <div class="discount">20% discount</div>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="plan-list">
-                <ul>
-                  <li>
-                    <img
-                      src="/assets/images/vuesax-outline-danger.svg"
-                      alt="check"
-                    />
-                    <span> Lorem ipsum dolor sit amet </span>
-                  </li>
-                  <li>
-                    <img
-                      src="/assets/images/vuesax-outline-danger.svg"
-                      alt="check"
-                    />
-                    <span> Lorem ipsum dolor sit amet </span>
-                  </li>
-                  <li>
-                    <img
-                      src="/assets/images/vuesax-outline-danger.svg"
-                      alt="check"
-                    />
-                    <span> Lorem ipsum dolor sit amet </span>
-                  </li>
-                  <li>
-                    <img
-                      src="/assets/images/vuesax-outline-danger.svg"
-                      alt="check"
-                    />
-                    <span> Lorem ipsum dolor sit amet </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="card-footer text-center">
-              <button routerLink="/auth/buy" class="btn btn-primary w-150">Buy Now</button>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 </section>

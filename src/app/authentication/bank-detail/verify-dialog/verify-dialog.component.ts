@@ -103,6 +103,7 @@ export class VerifyDialogComponent {
                     if(response.error){
                         this.toastService.error(JSON.stringify(response.message));
                     }else{
+                        localStorage.setItem('organizerId', JSON.stringify(response?.data?.organizer_id));
                         this.router.navigate(['/auth/package']) 
                     }
             
